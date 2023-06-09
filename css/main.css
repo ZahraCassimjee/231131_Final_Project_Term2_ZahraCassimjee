@@ -4,7 +4,16 @@ body {
     background-color: black;
    }
 
-   
+   .navbar {
+    background-color: black;
+    color: white !important; 
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100px;
+    padding:  20px;
+   }
 
    .h-buttons{
     width: 900px;
@@ -181,9 +190,10 @@ h3{
    }
 
    form{
-    width: 25%;
+    width: 50%;
     margin:  0 auto;
     margin-top: 50px;
+    color: white;
 }
 
 input{

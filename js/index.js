@@ -25,3 +25,10 @@ console.log(allVehicle)
 
 document.getElementById("VehicleForm").reset();
 }
+
+checkOut = () => {
+
+
+    window.location.href = "checkout.html";
+    
+    }
