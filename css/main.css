@@ -4,55 +4,7 @@ body {
     background-color: black;
    }
 
-   .navbar {
-    background-color: black;
-    color: white !important; 
-    font-family: Arial, sans-serif;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    height: 100px;
-    padding:  20px;
-   }
-   .navbar ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 20;
-    display: flex;
-    align-items: center;
-   }
-   .navbar li {
-    margin: 10px;
-    cursor: pointer;
-    padding-left: 80px;
-    font-family: Arial, sans-serif;
-   }
-   .navbar li:hover {
-    text-decoration: underline;
-   }
-  
-   .search-bar {
-    background-color: white;
-    padding: 5px;
-    display: flex;
-    align-items: center;
-    border-radius: 5px;
-    width: 200px;
-    margin-right: 30px;
-    margin-left: 80px;
-   }
-   .search-bar input[type="text"] {
-    border: none;
-    background-color: transparent;
-    margin-left: 5px;
-    color: black;
-    width: 100%;
-    font-family: Arial, sans-serif;
-   }
-   .navbar-right {
-    display: flex;
-    align-items: center;
-   } 
+   
 
    .h-buttons{
     width: 900px;
@@ -229,7 +181,7 @@ h3{
    }
 
    form{
-    width: 50%;
+    width: 25%;
     margin:  0 auto;
     margin-top: 50px;
 }
