@@ -31,10 +31,10 @@ displayCheck = () => {
     
     }
     
-    resetReturn = () => {
+    resettt = () => {
     
-    localStorage.removeItem("order");
-    window.location.href = "../index.html"
+   
+    window.location.href = '../index.html';
     
-    
+
     }

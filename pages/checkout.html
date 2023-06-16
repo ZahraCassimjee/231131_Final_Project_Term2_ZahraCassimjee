@@ -14,10 +14,44 @@
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 
-    <script src="/js/index.js"></script>
-    
+    <script src="/js/checkout.js"></script>
+
 </head>
 <body>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-12">
+               <h1>Finalize your Order</h1>   
+            </div>
+          
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-6">
+           <h2>Your Order:</h2> 
+        </div>
+        <div class="col-6">
+            <h2>Total:</h2> 
+         </div>
+    </div>
+    
+     <div id="orders">
+
+     </div>
+    
+ 
+    <div class="row">
+        <form>
+            <div class="form-group">
+              <label for="exampleInputPassword1">Discount Code</label>
+              <input type="text" class="form-control" id="exampleInputPassword1" placeholder="Put your code here">
+            </div>
+        
+            <button type="submit" class="btn btn-danger">Verify</button>
+            <button type="button" class="btn btn-danger" onclick="resettt()">Pay here</button>
+          </form>
+    <div class="row"></div>
     
 </body>
 </html>
