@@ -19,18 +19,127 @@ body {
    .h-buttons{
     width: 900px;
     height: 70px;
+   }
    
-}
-.button{
-    height: 70px;
-text-align: center;
-padding-top: 20px;
-font-weight: bold;
-float: left;
-margin-top: 50px;
-border-radius: 40PX;
-
- }
+    .display{
+      width: 50%;
+      height: 45px;
+      margin:  0 auto;
+      margin-top: 50px;
+      text-align: left;
+      border-bottom: 2px solid #f5f2f2d2;
+    }
+    .displayHeader h3{
+      float: left;
+    }
+    
+    .displayPriceOrder{
+      float: left;
+      margin-left: 48%;
+    }
+    
+    .buttonOrder{
+      width: 100%;
+      float: left;
+    }
+    
+    .OrderGrid{
+      width: 70%;
+      height: 100vh;
+      float: left;
+      padding-left: 5%;
+    }
+    
+    .OrderGrid h2{
+      margin-top: 50px;
+    }
+    
+    .OrderGrid h3{
+      margin: 0;
+      padding: 0;
+    }
+    
+    .TotalGrid {
+      width: 30%;
+      height: 100vh;
+      float: left;
+      background-color: black;
+      padding-top: 10%;
+      border-color: azure;
+      text-align: center;
+    }
+    
+    .TotalGrid input {
+      width: 50%;
+      margin:  0 auto;
+    }
+    
+    .TotalGrid h2{
+     font-size: 50px;
+     font-weight: 100;
+    }
+    
+    .TotalGrid h3{
+      margin-top: 50px;
+      font-weight: 100;
+    }
+    
+    
+    .CardOrderDisplay{
+      width: 90%;
+      height: 50px;
+      background-color: azure;
+      border-radius: 5px;
+      color: black;
+      margin-top: 20px;
+    }
+    
+    .CardOrderDisplay p{
+      float: left;
+      padding-left: 20px;
+      padding-right: 20px;
+      margin-right: 20px;
+      padding-top: 13px ;
+    }
+    
+    .Ordercard{
+      width: 29%;
+      height: auto;
+      border-radius: 5px;
+      margin-top: 15px;
+      float: left;
+      margin: 2%;
+     color: black;
+    }
+    
+    .OrderSelection{
+      width: 60%;
+      float: left;
+      height: 130px;
+    }
+    
+    .OrderControl{
+      height: 130px;
+      width: 40%;
+      float: left;
+      text-align: center;
+      padding-left: 5%;
+      padding-right: 5%;
+     
+    }
+    
+    
+    .button{
+        height: 70px;
+        text-align: center;
+        padding-top: 20px;
+        font-weight: bold;
+        float: left;
+        margin-top: 50px;
+        border-radius: 40px;
+        margin: 10px; 
+    
+     }
 
  .normal{
     width: 225px;

@@ -1,6 +1,4 @@
 let subOrders = [];
-
-
 makeSub = () => {
   let sTotal = 0;
   //sub name
@@ -9,23 +7,20 @@ makeSub = () => {
 //bread type
 let bread = document.getElementById("bread").value; 
     if(bread === "Honey wheat"){
-        realTimePrice = realTimePrice + 30;
+      sTotal = sTotal + 30;
     } else if(bread === "French loaf"){
-        realTimePrice = realTimePrice + 40;
+      sTotal = sTotal + 40;
     } else if(bread === "Whole wheat"){
-        realTimePrice = realTimePrice + 50;
+      sTotal = sTotal + 50;
     }
-
-
-
-  
+ 
 //toppings
-  let toppings = document.getElementsByName("toppings");
-  let topArray = [];
-  for (let i = 0; i < toppings.length; i++) {
-    if (toppings[i].checked) {
-      topArray.push(toppings[i].value);
-      sTotal = sTotal + +toppings[i].dataset.cost;
+  let fillings = document.getElementsByName("fillings");
+  let fillArray = [];
+  for (let i = 0; i < fillings.length; i++) {
+    if (fillings[i].checked) {
+      fillArray.push(fillings[i].value);
+      sTotal = sTotal + +fillings[i].dataset.cost;
     }
   }
 
@@ -41,22 +36,58 @@ let bread = document.getElementById("bread").value;
   }
 
 
-
   subOrders.push({
     Name: sName,
     Sauce: sauceValue,
-    Toppings: topArray,
+    fillings: fillArray,
     Price: sTotal,
   });
 
+  console.log(subOrders)
+  document.getElementById("orderCost").innerHTML = "R0.00"
   document.getElementById("subForm").reset();
+
 };
+
+
+
+OrderDisplay = () => {
+
+  orderCost = 0; 
+
+  let bread = document.getElementById("bread").value; 
+  if(bread === "Honey wheat"){
+    orderCost = orderCost + 30;
+  } else if(bread === "French loaf"){
+    orderCost = orderCost + 40;
+  } else if(bread === "Whole wheat"){
+    orderCost = orderCost + 50;
+  }
+
+  let sauceOption = document.getElementsByName("sauceRadio"); 
+  for(let i = 0; i < sauceOption.length; i++){
+      if(sauceOption[i].checked){
+        orderCost = orderCost + +sauceOption[i].dataset.cost
+      }
+  }
+
+  let fillOptions = document.getElementsByName("fillings");
+  for(let i = 0; i < fillOptions.length; i++){
+      if(fillOptions[i].checked){
+          realTimePrice = realTimePrice + +fillOptions[i].dataset.cost
+      }
+  }
+
+  document.getElementById("orderCost").innerHTML = "R" + realTimePrice + ".00"
+
+}
+
 
 //card display
 displaySubOrders = () => {
    
-    let area = document.getElementById("orders");
-   
+  let area = document.getElementById("displaySubOrders");
+  let total = document.getElementById("orderTotal");
 
     area.innerHTML = "";
 
@@ -65,33 +96,33 @@ displaySubOrders = () => {
   for (let i = 0; i < subOrders.length; i++) {
     let name = subOrders[i].Name;
     let sauce = subOrders[i].Sauce;
-    let toppings = subOrders[i].toppings;
+    let fillings = subOrders[i].fillings;
     let price = subOrders[i].Price;
 
     overallTotal += price;
 
     area.innerHTML += `
-    <div class="col-6">
+    <div class="Ordercard">
             <div class="card" style="width: 100%;">
               <div class="card-body">
                 <h5 class="card-title">${name}</h5>
                 <p>Size:  ${sauce}</p>
-                <p>Ingredients:  ${toppings}</p>
+                <p>Ingredients:  ${fillings}</p>
                 <p>Total Cost: R${price}.00</p>
               </div>
             </div>
           </div>
           `;
 
+
+          total.innerHTML = "R" + overallTotal + ".00"
   }
 };
 
-
-
-
 checkOut = () => {
-
-
-    window.location.href = "checkout.html";
-    
+      let data = JSON.stringify(subOrders);
+      console.log(data)
+      localStorage.setItem("SubOrder", data);
+      window.location.href = "../pages/checkout.html";
+  
     }

@@ -168,29 +168,21 @@
       
             </form>
 
-            <div class="col-6 output">
-              <div class="outHeader">
-                <h3>Smoothie Order List</h3>
+            <div class="display">
+              <div class="displayHeader">
+                  <h3>Your sub order:</h3>
+                <div class ="displayPriceOrder"><h3 id="orderTotal">R0.00</h3> </div>
               </div>
-              <div id="orders">
-        
-          
-        
-            </div>
-            <div class=" output">
-              <h3></h3>
-              <div class="row" id="displaySubOrders">
+              <div id="displaySubOrders">
       
                 <!-- space for order -->
                 
           
-              </div> 
+              </div>
+              <div class="buttonOrder">
+                <button class="btn btn-primary" type="button" onclick= "checkOut()" >Proceed to Check Out</button>    
+              </div>
             </div>
-          </div>
-  
-            <div class="row">
-              <button class="btn btn-primary" type="button" onclick= "checkOut()" >Proceed to Check Out</button>    
-    </div>
 
 </body>
 </html>
