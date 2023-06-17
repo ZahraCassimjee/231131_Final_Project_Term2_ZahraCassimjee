@@ -14,7 +14,7 @@ let bread = document.getElementById("bread").value;
       sTotal = sTotal + 50;
     }
  
-//toppings
+//fillings
   let fillings = document.getElementsByName("fillings");
   let fillArray = [];
   for (let i = 0; i < fillings.length; i++) {
